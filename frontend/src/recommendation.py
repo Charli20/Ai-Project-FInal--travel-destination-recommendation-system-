@@ -1,4 +1,4 @@
-
+from pathlib import Path
 import os
 import re
 import socket
@@ -23,10 +23,20 @@ except ImportError:
 # =====================================================
 # CONFIGURATION
 # =====================================================
-DATA_PATH = r"C:\\NIBM\\Travel recommendation system\\Travel-Recommendation-system-in-Sri-Lanka-\\Data Preparation\\document_data\\documents_updated.csv"
-GEMINI_EMBED_PATH = r"C:\\NIBM\\Travel recommendation system\\Travel-Recommendation-system-in-Sri-Lanka-\\Recommendation System\\embeddings\\gemini_embeddings.pkl"
-SBERT_EMBED_PATH = r"C:\\NIBM\\Travel recommendation system\\Travel-Recommendation-system-in-Sri-Lanka-\\Recommendation System\\embeddings\\sbert_embeddings.pkl"
-SBERT_MODEL_PATH = r"C:\\NIBM\\Travel recommendation system\\Travel-Recommendation-system-in-Sri-Lanka-\\Recommendation System\\model"
+
+
+
+# DATA_PATH = r"C:\\NIBM\\Travel recommendation system\\Travel-Recommendation-system-in-Sri-Lanka-\\Data Preparation\\document_data\\documents_updated.csv"
+# GEMINI_EMBED_PATH = r"C:\\NIBM\\Travel recommendation system\\Travel-Recommendation-system-in-Sri-Lanka-\\Recommendation System\\embeddings\\gemini_embeddings.pkl"
+# SBERT_EMBED_PATH = r"C:\\NIBM\\Travel recommendation system\\Travel-Recommendation-system-in-Sri-Lanka-\\Recommendation System\\embeddings\\sbert_embeddings.pkl"
+# SBERT_MODEL_PATH = r"C:\\NIBM\\Travel recommendation system\\Travel-Recommendation-system-in-Sri-Lanka-\\Recommendation System\\model"
+
+BASE_DIR = Path(__file__).resolve().parent.parent   # project root
+
+DATA_PATH = BASE_DIR / "Data Preparation" / "document_data" / "documents_updated.csv"
+GEMINI_EMBED_PATH = BASE_DIR / "Recommendation System" / "embeddings" / "gemini_embeddings.pkl"
+SBERT_EMBED_PATH = BASE_DIR / "Recommendation System" / "embeddings" / "sbert_embeddings.pkl"
+SBERT_MODEL_PATH = BASE_DIR / "Recommendation System" / "model"
 
 TOP_N = 10
 HIDDEN_GEM_THRESHOLD = 50
