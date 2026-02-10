@@ -1,6 +1,6 @@
 from google import genai
 
-client = genai.Client(api_key="AIzaSyCeO-Zq3UYHkFvj_o451tl_BCX-yc1c3zU")
+client = genai.Client(api_key="api key")
 
 print("📋 Available models and their supported actions:\n")
 models = client.models.list()
@@ -28,7 +28,7 @@ if embedding_models:
         print(f"⚠️ {test_model} failed: {e}")
 
 # result = client.models.embed_content(
-#         model="gemini-embedding-001",
+#         model="add the model",
 #         contents= [
 #             "What is the meaning of life?",
 #             "What is the purpose of existence?",
