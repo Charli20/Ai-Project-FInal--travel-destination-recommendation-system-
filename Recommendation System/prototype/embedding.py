@@ -12,7 +12,7 @@ GEMINI_EMBED_PATH = r"C:\\NIBM\\Travel recommendation system\\Travel-Recommendat
 SBERT_EMBED_PATH = r"C:\\NIBM\\Travel recommendation system\\Travel-Recommendation-system-in-Sri-Lanka-\\Recommendation System\\embeddings\\sbert_embeddings.pkl"
 
 
-client = genai.Client(api_key="AIzaSyCeO-Zq3UYHkFvj_o451tl_BCX-yc1c3zU")
+client = genai.Client(api_key="Add Api")
 
 
 sbert_model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -37,7 +37,7 @@ def generate_gemini_embeddings(text_list, batch_size=50, sleep_sec=1):
         batch = text_list[i:i+batch_size]
         try:
             response = client.models.embed_content(
-                model="gemini-embedding-001",
+                model="Use your model ( text embedding 004 or gemini embedding 001)",
                 contents=batch
             )
            
