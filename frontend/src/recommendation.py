@@ -84,7 +84,7 @@ USE_GEMINI = False
 if INTERNET_AVAILABLE:
     try:
         print("🌐 Internet detected → Using Gemini embeddings if available")
-        client = genai.Client(api_key="AIzaSyCeO-Zq3UYHkFvj_o451tl_BCX-yc1c3zU")
+        client = genai.Client(api_key="api key (gemini")
         USE_GEMINI = True
     except Exception as e:
         print(f"⚠️ Gemini initialization failed, falling back to SBERT: {e}")
@@ -156,7 +156,7 @@ def get_recommendations(query, category="all"):
     if USE_GEMINI:
         try:
             query_emb = client.models.embed_content(
-                model="text-embedding-004",
+                model="add the model text-embedding-004",
                 contents=query
             )
             query_vector = np.array(query_emb.embeddings[0].values)
