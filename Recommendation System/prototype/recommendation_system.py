@@ -40,7 +40,7 @@ INTERNET_AVAILABLE = has_internet()
 if INTERNET_AVAILABLE:
     print(" Strong internet detected → Using Gemini (online)")
     import google.genai as genai
-    client = genai.Client(api_key="AIzaSyCeO-Zq3UYHkFvj_o451tl_BCX-yc1c3zU")
+    client = genai.Client(api_key="api key")
     USE_GEMINI = True
 else:
     print(" No internet → Using SBERT (Offline Mode)")
